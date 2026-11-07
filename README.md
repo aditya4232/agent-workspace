@@ -4,15 +4,15 @@ Agent Workspace is the conversation runtime and agent execution product in the A
 
 **Canonical app:** chat.adityacuz.in (planned)  
 **Workspace launcher:** Clemo at clemo.adityacuz.in (planned)  
-**Status:** design phase / planned. Features below describe intended behavior, not a live service.
+**Status:** design phase / planned. No runtime implementation is present yet.
 
 ## Product boundaries
-- **Clemo:** identity/workspace shell, catalog, repository connections and launcher.
+- **Clemo:** identity/workspace shell, catalog, repository connections, launcher and credit ledger.
 - **Agent Workspace:** chats, model/provider routing, streaming, tool policy, MCP, conversation state, user data retention and trace production.
 - **Agent Labs:** independent experiment/evaluation system; consumes synthetic or approved traces.
 - **Portfolio:** public narrative and published evidence; no access to private chats or keys.
 
-## Capabilities
+## Capabilities (planned)
 ### Chat and model control
 Provider-independent adapters for OpenAI-compatible and Anthropic-compatible APIs; model discovery where supported; explicit mid-thread model switch with context compatibility and cost warning; streaming/cancellation/retry; context budget and compaction transparency; session-only BYOK default. Encrypted vault is opt-in and only after threat review.
 
@@ -31,4 +31,10 @@ Hono/Cloudflare Worker owns API, authorization and policy boundary. UI is indepe
 ## Security
 SSRF defense for custom provider endpoints: HTTPS, allowed ports, DNS/IP validation, block loopback/private/link-local/metadata ranges, no redirects by default, timeout and response size caps. Tool policy is deterministic and server-side; model output cannot authorize execution. Test prompt injection, cross-tenant isolation, key exfiltration, unsafe URLs, malicious MCP server and unbounded consumption.
 
-See [Architecture](docs/ARCHITECTURE.md), [Security model](docs/SECURITY-MODEL.md), [Roadmap](docs/ROADMAP.md).
+## Documentation
+- [AI builder context](docs/AI-BUILD-CONTEXT.md)
+- [Architecture](docs/ARCHITECTURE.md)
+- [Security model](docs/SECURITY-MODEL.md)
+- [Performance/security/quality contract](docs/AGENT-PERFORMANCE-SECURITY-AND-QUALITY.md)
+- [Development handoff](docs/DEVELOPMENT-HANDOFF.md)
+- [Roadmap](docs/ROADMAP.md)
