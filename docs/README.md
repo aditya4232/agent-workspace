@@ -2,6 +2,7 @@
 
 Status: architecture and research documentation. Runtime implementation is not yet present in this repository.
 
+- [AI builder context](AI-BUILD-CONTEXT.md): canonical product truth, ownership, invariants, security and build workflow.
 - [Architecture](ARCHITECTURE.md): system boundaries and components.
 - [Security model](SECURITY-MODEL.md): tool policy and data isolation.
 - [Roadmap](ROADMAP.md): delivery phases.
