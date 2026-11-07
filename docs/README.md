@@ -10,7 +10,9 @@ Status: architecture and research documentation. Runtime implementation is not y
 - [Agent performance, security and output quality](AGENT-PERFORMANCE-SECURITY-AND-QUALITY.md): latency budgets, streaming, model routing, consumer trust, security and evaluation gates.
 - [Development handoff](DEVELOPMENT-HANDOFF.md): product UX, runtime components, run state machine, data model, phases and acceptance gates.
 
-## Product boundary
+- [Agent Workspace Frontend and Runtime Build Playbook](FRONTEND-BACKEND-BUILD-PLAYBOOK.md): frontend/backend implementation contract, design skill workflow, Figma scope and verification gates.
+
+## $1
 Agent Workspace owns conversations, run orchestration, provider profiles, BYOK secret references, MCP grants and trace production. Clemo owns credits, payment and subscription ledger. Never put provider keys in Clemo, portfolio analytics or Agent Labs datasets. Cross-product usage is reported as signed, minimal usage events; Clemo validates and settles its own reservation.
 
 ## Verification
